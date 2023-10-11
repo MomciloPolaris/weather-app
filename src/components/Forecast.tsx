@@ -42,15 +42,6 @@ const Forecast = ({ data }: Props): JSX.Element => {
             <Degree temp={Math.floor(today.main.temp_min)} />
           </p>
         </section>
-        <section></section>
-        <canvas
-          id="goodCanvas1"
-          width="400"
-          height="100"
-          aria-label="Hello ARIA World"
-          role="img"
-        ></canvas>
-
         <section className="flex overflow-x-scroll mt-4 pb-2 mb-5">
           {data.list.map((item, i) => (
             <div
