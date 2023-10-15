@@ -37,7 +37,7 @@ const useForecast = () => {
         //@ts-ignore
         const formatedData = forecastData.list.map( (item) => item.main.temp)
         console.log(forecastData)
-        setForecast(formatedData);
+        setForecast(forecastData);
       });
   };
 

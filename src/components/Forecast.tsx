@@ -1,4 +1,10 @@
-import React from "react";
+import {
+  CategoryScale,
+  Chart as ChartJS,
+  LineElement,
+  LinearScale,
+  PointElement,
+} from "chart.js";
 import { Line } from "react-chartjs-2";
 import Infos from "./Infos";
 import Sunrise from "./Icons/Sunrise";
@@ -25,6 +31,7 @@ function Degree({ temp }: { temp: number }) {
 }
 
 function Forecast({ data }: Props) {
+  ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement);
   const today = data.list[0];
 
   const renderHourlyForecast = () => {
